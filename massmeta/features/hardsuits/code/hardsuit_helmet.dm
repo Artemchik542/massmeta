@@ -4,13 +4,15 @@
 	icon = 'massmeta/features/hardsuits/icons/hats.dmi'
 	worn_icon = 'massmeta/features/hardsuits/icons/head.dmi'
 	icon_state = "hardsuit0-engineering"
+	// no inhand_icon_state because its a part of hardsuit = you can't take it
+	strip_delay = 80
 	max_integrity = 300
 	armor_type = /datum/armor/hardsuit
 	light_system = OVERLAY_LIGHT_DIRECTIONAL
 	light_range = 4
 	light_power = 1
 	light_on = FALSE
-	min_cold_protection_temperature = SPACE_SUIT_MIN_TEMP_PROTECT
+	min_cold_protection_temperature = SPACE_SUIT_MIN_TEMP_PROTECT // ?
 	actions_types = list(/datum/action/item_action/toggle_helmet_light)
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH | PEPPERPROOF
 	visor_flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH | PEPPERPROOF

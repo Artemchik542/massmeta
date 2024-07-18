@@ -17,7 +17,7 @@ TODO:
 
 ### Defines:
 
-- ~meta_defines/inventory.dm
+- ~meta_defines/hardsuit.dm
 
 
 ### TGUI Files:
@@ -27,4 +27,4 @@ TODO:
 
 ### Credits:
 
-- N/A
+- homexp13
