@@ -32,7 +32,7 @@
 ///////// Commands choice beacons ///////////
 
 /obj/item/choice_beacon/space_suit/captain
-	extra_jetpack = TRUE
+	// Cap already has his jetpack
 
 /obj/item/choice_beacon/space_suit/captain/generate_display_names()
 	var/static/list/captain_suits

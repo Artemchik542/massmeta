@@ -20,8 +20,8 @@
 		)
 	siemens_coefficient = 0
 	actions_types = list(
-		/datum/action/item_action/toggle_spacesuit,
 		/datum/action/item_action/toggle_helmet,
+		/datum/action/item_action/toggle_spacesuit
 		)
 	supports_variations_flags = NONE
 
@@ -49,45 +49,47 @@
 		hardsuit.suit = src
 		helmet = hardsuit
 
-/obj/item/clothing/suit/space/hardsuit/proc/RemoveHelmet()
+/obj/item/clothing/suit/space/hardsuit/proc/RemoveHelmet(mob/living/carbon/human/user)
 	if(!helmet)
 		return
 	helmet_on = FALSE
 	if(ishuman(helmet.loc))
-		var/mob/living/carbon/human_wearer = helmet.loc
 		if(helmet.on)
-			helmet.attack_self(human_wearer)
-		human_wearer.transferItemToLoc(helmet, src, TRUE)
-		human_wearer.update_worn_oversuit()
-		to_chat(human_wearer, span_notice("The helmet on the hardsuit disengages."))
+			helmet.attack_self(user)
+		user.transferItemToLoc(helmet, src, TRUE)
+		user.update_worn_oversuit()
+		to_chat(user, span_notice("The helmet on the hardsuit disengages."))
 		playsound(src.loc, 'sound/vehicles/mecha/mechmove03.ogg', 50, TRUE)
 	else
 		helmet.forceMove(src)
 
-/obj/item/clothing/suit/space/hardsuit/proc/ToggleHelmet()
-	var/mob/living/carbon/human/human_wearer = src.loc
+/obj/item/clothing/suit/space/hardsuit/proc/ToggleHelmet(mob/living/carbon/human/user)
 	if(!istype(src.loc) || !hardsuit_helmet_type)
 		return
 	if(!helmet)
-		to_chat(human_wearer, span_warning("The helmet's lightbulb seems to be damaged! You'll need a replacement bulb."))
+		to_chat(user, span_warning("The helmet's lightbulb seems to be damaged! You'll need a replacement bulb."))
 		return
 	if(!helmet_on)
-		if(human_wearer.wear_suit != src)
-			to_chat(human_wearer, span_warning("You must be wearing [src] to engage the helmet!"))
+		if(user.wear_suit != src)
+			to_chat(user, span_warning("You must be wearing [src] to engage the helmet!"))
 			return
-		if(human_wearer.head)
-			to_chat(human_wearer, span_warning("You're already wearing something on your head!"))
+		if(user.head)
+			to_chat(user, span_warning("You're already wearing something on your head!"))
 			return
-		else if(human_wearer.equip_to_slot_if_possible(helmet, ITEM_SLOT_HEAD, 0, 0, 1))
-			to_chat(human_wearer, span_notice("You engage the helmet on the hardsuit."))
+		else if(user.equip_to_slot_if_possible(helmet, ITEM_SLOT_HEAD, 0, 0, 1))
+			to_chat(user, span_notice("You engage the helmet on the hardsuit."))
 			helmet_on = TRUE
-			human_wearer.update_worn_oversuit()
+			user.update_worn_oversuit()
 			playsound(src.loc, 'sound/vehicles/mecha/mechmove03.ogg', 50, TRUE)
 	else
-		RemoveHelmet()
+		RemoveHelmet(user)
 
-/obj/item/clothing/suit/space/hardsuit/ui_action_click()
-	ToggleHelmet()
+/obj/item/clothing/suit/space/hardsuit/ui_action_click(mob/living/carbon/human/user, actiontype)
+	if(istype(actiontype, /datum/action/item_action/toggle_helmet))
+		ToggleHelmet(user)
+		return
+	. = ..()
+
 
 /obj/item/clothing/suit/space/hardsuit/attack_self(mob/user)
 	user.changeNext_move(CLICK_CD_MELEE)
