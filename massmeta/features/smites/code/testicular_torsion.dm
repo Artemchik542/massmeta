@@ -30,5 +30,5 @@
 	)
 
 	carbon_target.emote("scream")
-	var/list/phrase = world.file2list("massmeta/features/smites/string/balls_phrases.txt")
+	var/list/phrase = world.file2list("strings/massmeta/testicular_torsion_phrases.txt")
 	carbon_target.say(pick(phrase))

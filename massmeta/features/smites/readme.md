@@ -1,8 +1,10 @@
-## Module ID: TESTICULAR_TORSION
+## Module ID: testicular_torsion
 
 ### Description:
 
 Добавляет админский Смайт "Testicular torsion".
+
+Файлы фраз лежат в: "strings/massmeta/testicular_torsion_phrases.txt"
 
 
 ### TG Proc/File Changes:
@@ -27,4 +29,5 @@
 
 ### Credits:
 
-- N/A
+- Bruh-24
+- Huz2e - починка багов
