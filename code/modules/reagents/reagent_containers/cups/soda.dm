@@ -75,7 +75,7 @@
 
 		//MASSMETA EDIT ADDITION BEGIN (kvass)
 		if(icon_state == "kvass")
-			crushed_can.icon = 'massmeta/icons/items/janitor.dmi'
+			crushed_can.icon = 'massmeta/features/kvass/icons/janitor.dmi'
 		//MASSMETA EDIT ADDITION END
 
 		qdel(src)
@@ -156,7 +156,7 @@
 
 	//MASSMETA EDIT ADDITION BEGIN (kvass)
 	if(icon_state == "kvass")
-		crushed_can.icon = 'massmeta/icons/items/janitor.dmi'
+		crushed_can.icon = 'massmeta/features/kvass/icons/janitor.dmi'
 	//MASSMETA EDIT ADDITION END
 
 	moveToNullspace()

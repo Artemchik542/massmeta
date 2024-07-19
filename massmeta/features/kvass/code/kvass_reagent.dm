@@ -1,3 +1,6 @@
+// Kvass reagent itself
+
+// code/modules/reagents/chemistry/reagents/drinks/drink_reagents.dm
 /datum/reagent/consumable/kvass
 	name = "Kvass"
 	description = "Kvaaaaaaass."
@@ -5,7 +8,7 @@
 	quality = DRINK_VERYGOOD
 	overdose_threshold = 50
 	taste_description = "mmmmm kvass"
-	ph = 6 // а точно ли 6?
+	ph = 4
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 	default_container = /obj/item/reagent_containers/cup/soda_cans/kvass
 
@@ -17,7 +20,7 @@
 	need_mob_update = affected_mob.adjustToxLoss(-0.5, updating_health = FALSE, required_biotype = affected_biotype)
 	need_mob_update += affected_mob.adjustOrganLoss(ORGAN_SLOT_LIVER, -0.5 * REM * seconds_per_tick, required_organ_flag = ORGAN_ORGANIC)
 	for(var/datum/reagent/toxin/R in affected_mob.reagents.reagent_list)
-		affected_mob.reagents.remove_reagent(R.type, 2.5 * REM * seconds_per_tick) // а не имба?
+		affected_mob.reagents.remove_reagent(R.type, 1.5 * REM * seconds_per_tick)
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
 
@@ -25,5 +28,5 @@
 	. = ..()
 	affected_mob.set_jitter_if_lower(5 SECONDS * REM * seconds_per_tick)
 	if(SPT_PROB(7.5, seconds_per_tick))
-		var/list/phrase = world.file2list("massmeta/features/kvass/string/kvass.txt")
+		var/list/phrase = world.file2list("strings/massmeta/kvass.txt")
 		affected_mob.say(pick(phrase), forced = /datum/reagent/consumable/kvass)

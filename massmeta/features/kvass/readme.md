@@ -4,6 +4,9 @@
 
 Добавляет Квасс, мммм квасс!
 
+Используется модуль soviet_crate.
+
+Фразы при овердозе лежат в: "strings/massmeta/kvass.txt"
 
 ### TG Proc/File Changes:
 
