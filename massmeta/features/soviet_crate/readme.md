@@ -1,4 +1,4 @@
-## Module ID: SOVIET_CRATE
+## Module ID: soviet_crate
 
 ### Description:
 
@@ -27,4 +27,4 @@
 
 ### Credits:
 
-- N/A
+- Artemchik542
