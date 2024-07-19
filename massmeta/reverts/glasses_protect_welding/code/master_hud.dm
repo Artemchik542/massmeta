@@ -1,3 +1,4 @@
+// ORIGINAL FILE: code/modules/clothing/glasses/hud.dm
 /obj/item/clothing/glasses/hud/health/sunglasses
 	flash_protect = FLASH_PROTECTION_WELDER
 

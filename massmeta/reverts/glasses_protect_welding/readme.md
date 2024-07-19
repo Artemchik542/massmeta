@@ -1,4 +1,4 @@
-## Module ID: REVERT_GLASSES
+## Module ID: glasses_protect_welding
 
 ### Description:
 
@@ -13,8 +13,8 @@
 
 ### Modular Overrides:
 
-- massmeta/code/modules/clothing/glasses/_glasses.dm
-- massmeta/code/modules/clothing/glasses/hud.dm
+- code/modules/clothing/glasses/_glasses.dm
+- code/modules/clothing/glasses/hud.dm
 
 
 ### Defines:
