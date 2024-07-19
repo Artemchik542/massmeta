@@ -8,10 +8,10 @@ NC="\033[0m" # No Color
 
 echo -e "${BLUE}Re-running grep checks, but looking in modular_meta/features/...${NC}"
 
-# Run the linters again, but modular massmeta code (features).
+# Run the linters again, but in modular massmeta code (features).
 sed 's/code\/\*\*\/\*\*.dm/massmeta\/features\/\*\*\/\*\*.dm/g' <tools/ci/check_grep.sh | bash
 
 echo -e "${BLUE}Re-running grep checks, but looking in modular_meta/master_files/...${NC}"
 
-# Run the linters again, but modular massmeta code (master_files).
-sed 's/code\/\*\*\/\*\*.dm/massmeta\/master_files\/\*\*\/\*\*.dm/g' <tools/ci/check_grep.sh | bash
+# Run the linters again, but in modular massmeta code (reverts).
+sed 's/code\/\*\*\/\*\*.dm/massmeta\/reverts\/\*\*\/\*\*.dm/g' <tools/ci/check_grep.sh | bash
