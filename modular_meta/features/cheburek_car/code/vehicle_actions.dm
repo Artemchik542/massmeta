@@ -1,6 +1,10 @@
 //CHЁBUREK ACTION DATUMS
 /datum/action/vehicle/sealed/gopnik
+<<<<<<<< HEAD:modular_meta/features/cheburek_car/code/vehicle_actions.dm
 	button_icon = 'modular_meta/features/cheburek_car/icons/actions_vehicle.dmi'
+========
+	button_icon = 'massmeta/features/cheburek_car/icons/actions_vehicle.dmi'
+>>>>>>>> d5185188a4f (mod cheburek):massmeta/features/cheburek_car/code/vehicle_actions.dm
 	name = "Toggle Gop Mode"
 	desc = "Grabs your Vodka and Semki!"
 	button_icon_state = "gop_mode"
@@ -16,7 +20,11 @@
 	C.toggle_gopmode(owner)
 
 /datum/action/vehicle/sealed/gear_up
+<<<<<<<< HEAD:modular_meta/features/cheburek_car/code/vehicle_actions.dm
 	button_icon = 'modular_meta/features/cheburek_car/icons/actions_vehicle.dmi'
+========
+	button_icon = 'massmeta/features/cheburek_car/icons/actions_vehicle.dmi'
+>>>>>>>> d5185188a4f (mod cheburek):massmeta/features/cheburek_car/code/vehicle_actions.dm
 	name = "Gear UP"
 	desc = "Make your vedro move faster!"
 	button_icon_state = "car_gear_up"
@@ -32,7 +40,11 @@
 	G.increase_gear(owner)
 
 /datum/action/vehicle/sealed/gear_down
+<<<<<<<< HEAD:modular_meta/features/cheburek_car/code/vehicle_actions.dm
 	button_icon = 'modular_meta/features/cheburek_car/icons/actions_vehicle.dmi'
+========
+	button_icon = 'massmeta/features/cheburek_car/icons/actions_vehicle.dmi'
+>>>>>>>> d5185188a4f (mod cheburek):massmeta/features/cheburek_car/code/vehicle_actions.dm
 	name = "Gear DOWN"
 	desc = "Make your vedro move slower!"
 	button_icon_state = "car_gear_down"
@@ -62,7 +74,11 @@
 	L.car_lights_toggle(owner)
 
 /datum/action/vehicle/sealed/blinkers
+<<<<<<<< HEAD:modular_meta/features/cheburek_car/code/vehicle_actions.dm
 	button_icon = 'modular_meta/features/cheburek_car/icons/actions_vehicle.dmi'
+========
+	button_icon = 'massmeta/features/cheburek_car/icons/actions_vehicle.dmi'
+>>>>>>>> d5185188a4f (mod cheburek):massmeta/features/cheburek_car/code/vehicle_actions.dm
 	name = "Avariyka"
 	desc = "Useful if you need to park your bucket anywhere"
 	button_icon_state = "car_blinker"

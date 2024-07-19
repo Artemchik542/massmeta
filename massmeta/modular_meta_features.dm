@@ -14,6 +14,7 @@
 
 // BEGIN_INCLUDE
 #include "features\hardsuits\includes.dm"
+#include "features\additional_circuit\includes.dm"
 #include "features\kvass\includes.dm"
 #include "features\smites\includes.dm"
 #include "features\soviet_crate\includes.dm"

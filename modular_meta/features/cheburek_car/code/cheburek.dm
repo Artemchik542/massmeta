@@ -1,4 +1,8 @@
+<<<<<<<< HEAD:modular_meta/features/cheburek_car/code/cheburek.dm
 /*
+========
+ /*
+>>>>>>>> d5185188a4f (mod cheburek):massmeta/features/cheburek_car/code/cheburek.dm
 Really big car with 4х4 sprite.
 
 Can run people over.
@@ -15,7 +19,11 @@ Some memes and gags included.
 /obj/vehicle/sealed/car/cheburek
 	name = "Cheburek"
 	desc = "The cheapest Bucket with bolts and nuts you can afford"
+<<<<<<<< HEAD:modular_meta/features/cheburek_car/code/cheburek.dm
 	icon = 'modular_meta/features/cheburek_car/icons/shaha.dmi'
+========
+	icon = 'massmeta/features/cheburek_car/icons/shaha.dmi'
+>>>>>>>> d5185188a4f (mod cheburek):massmeta/features/cheburek_car/code/cheburek.dm
 	icon_state = "cheburek" // the name form gta 5, you know?
 	layer = LYING_MOB_LAYER
 	max_occupants = 4
@@ -186,7 +194,11 @@ Some memes and gags included.
 		add_overlay(image(icon, "open_bonnet_stickers", ABOVE_MOB_LAYER))
 	else
 		add_overlay(image(icon, "close_bonnet_stickers", ABOVE_MOB_LAYER))
+<<<<<<<< HEAD:modular_meta/features/cheburek_car/code/cheburek.dm
 	playsound(src, 'modular_meta/features/cheburek_car/sound/gopnik_laught.ogg', 66)
+========
+	playsound(src, 'massmeta/features/cheburek_car/sound/gopnik_laught.ogg', 66)
+>>>>>>>> d5185188a4f (mod cheburek):massmeta/features/cheburek_car/code/cheburek.dm
 	balloon_alert(user, "some odd insulating tape appeared on [src].")
 	visible_message(span_userdanger("You hear a terrible roar from under the bottom of the car"))
 	name = "Cheburek Chad"
@@ -206,14 +218,22 @@ Some memes and gags included.
 			if(obj_flags & EMAGGED)
 				cut_overlay(image(icon, "open_bonnet_stickers", ABOVE_MOB_LAYER))
 				add_overlay(image(icon, "close_bonnet_stickers", ABOVE_MOB_LAYER))
+<<<<<<<< HEAD:modular_meta/features/cheburek_car/code/cheburek.dm
 			playsound(src, 'modular_meta/features/cheburek_car/sound/close_bonnet.ogg', 50)
+========
+			playsound(src, 'massmeta/features/cheburek_car/sound/close_bonnet.ogg', 50)
+>>>>>>>> d5185188a4f (mod cheburek):massmeta/features/cheburek_car/code/cheburek.dm
 		else
 			bonnet_isopen = !bonnet_isopen
 			add_overlay(image(icon, "car_openbonnet", LYING_MOB_LAYER))
 			if(obj_flags & EMAGGED)
 				cut_overlay(image(icon, "close_bonnet_stickers", ABOVE_MOB_LAYER))
 				add_overlay(image(icon, "open_bonnet_stickers", ABOVE_MOB_LAYER))
+<<<<<<<< HEAD:modular_meta/features/cheburek_car/code/cheburek.dm
 			playsound(src, 'modular_meta/features/cheburek_car/sound/open_bonnet.ogg', 50)
+========
+			playsound(src, 'massmeta/features/cheburek_car/sound/open_bonnet.ogg', 50)
+>>>>>>>> d5185188a4f (mod cheburek):massmeta/features/cheburek_car/code/cheburek.dm
 
 /obj/vehicle/sealed/car/cheburek/wrench_act(mob/living/user, obj/item/tool)
 	if(user.combat_mode)
@@ -297,7 +317,11 @@ Some memes and gags included.
 		return
 	if(gopgear == 0 && gearbox_failure_count != 10)
 		canmove = TRUE
+<<<<<<<< HEAD:modular_meta/features/cheburek_car/code/cheburek.dm
 		playsound(src, 'modular_meta/features/cheburek_car/sound/emergency_brake_release.ogg', 100)
+========
+		playsound(src, 'massmeta/features/cheburek_car/sound/emergency_brake_release.ogg', 100)
+>>>>>>>> d5185188a4f (mod cheburek):massmeta/features/cheburek_car/code/cheburek.dm
 		vehicle_move_delay -= 0.5
 		gopgear++
 		return
@@ -305,14 +329,22 @@ Some memes and gags included.
 		if(prob(gearbox_failure_count * 10) || prob(33))
 			if(gearbox_failure_count == 10)
 				if(canmove)
+<<<<<<<< HEAD:modular_meta/features/cheburek_car/code/cheburek.dm
 					playsound(src, pick('modular_meta/features/cheburek_car/sound/gear_blyat.ogg', 'modular_meta/features/cheburek_car/sound/gear_nah.ogg'), 100)
+========
+					playsound(src, pick('massmeta/features/cheburek_car/sound/gear_blyat.ogg', 'massmeta/sounds/vehicles/gear_nah.ogg'), 100)
+>>>>>>>> d5185188a4f (mod cheburek):massmeta/features/cheburek_car/code/cheburek.dm
 					toggle_blinkers()
 				canmove = FALSE
 				balloon_alert(user, "gearbox broken")
 			else
 				gearbox_failure_count++
 			AddElement(/datum/element/waddling)
+<<<<<<<< HEAD:modular_meta/features/cheburek_car/code/cheburek.dm
 			playsound(src, pick('modular_meta/features/cheburek_car/sound/gear_fault.ogg', 'modular_meta/features/cheburek_car/sound/gear_fault2.ogg', 'modular_meta/features/cheburek_car/sound/gear_fault3.ogg'), 50)
+========
+			playsound(src, pick('massmeta/features/cheburek_car/sound/gear_fault.ogg', 'massmeta/features/cheburek_car/sound/gear_fault2.ogg', 'massmeta/features/cheburek_car/sound/gear_fault3.ogg'), 50)
+>>>>>>>> d5185188a4f (mod cheburek):massmeta/features/cheburek_car/code/cheburek.dm
 			addtimer(CALLBACK(src, PROC_REF(revert_waddling)), 1 SECONDS)
 		else
 			playsound(src, 'sound/vehicles/mecha/mechmove04.ogg', 75)
@@ -328,7 +360,11 @@ Some memes and gags included.
 		return
 	if(gopgear == 1 && gearbox_failure_count != 10)
 		canmove = FALSE
+<<<<<<<< HEAD:modular_meta/features/cheburek_car/code/cheburek.dm
 		playsound(src, 'modular_meta/features/cheburek_car/sound/emergency_brake_pull.ogg', 100)
+========
+		playsound(src, 'massmeta/features/cheburek_car/sound/emergency_brake_pull.ogg', 100)
+>>>>>>>> d5185188a4f (mod cheburek):massmeta/features/cheburek_car/code/cheburek.dm
 		vehicle_move_delay += 0.5
 		gopgear--
 		return
@@ -336,14 +372,22 @@ Some memes and gags included.
 		if(prob(gearbox_failure_count * 10) || prob(33))
 			if(gearbox_failure_count == 10)
 				if(canmove)
+<<<<<<<< HEAD:modular_meta/features/cheburek_car/code/cheburek.dm
 					playsound(src, pick('modular_meta/features/cheburek_car/sound/gear_blyat.ogg', 'modular_meta/features/cheburek_car/sound/gear_nah.ogg'), 100)
+========
+					playsound(src, pick('massmeta/features/cheburek_car/sound/gear_blyat.ogg', 'massmeta/features/cheburek_car/sound/gear_nah.ogg'), 100)
+>>>>>>>> d5185188a4f (mod cheburek):massmeta/features/cheburek_car/code/cheburek.dm
 					toggle_blinkers()
 				canmove = FALSE
 				balloon_alert(user, "gearbox broken")
 			else
 				gearbox_failure_count++
 			AddElement(/datum/element/waddling) // your gears are juggling like a clown do
+<<<<<<<< HEAD:modular_meta/features/cheburek_car/code/cheburek.dm
 			playsound(src, pick('modular_meta/features/cheburek_car/sound/gear_fault.ogg', 'modular_meta/features/cheburek_car/sound/gear_fault2.ogg', 'modular_meta/features/cheburek_car/sound/gear_fault3.ogg'), 50)
+========
+			playsound(src, pick('massmeta/features/cheburek_car/sound/gear_fault.ogg', 'massmeta/features/cheburek_car/sound/gear_fault2.ogg', 'massmeta/features/cheburek_car/sound/gear_fault3.ogg'), 50)
+>>>>>>>> d5185188a4f (mod cheburek):massmeta/features/cheburek_car/code/cheburek.dm
 			addtimer(CALLBACK(src, PROC_REF(revert_waddling)), 1 SECONDS)
 		else
 			playsound(src, 'sound/vehicles/mecha/mechmove04.ogg', 75)
@@ -374,7 +418,11 @@ Some memes and gags included.
 
 /obj/vehicle/sealed/car/cheburek/proc/endless_tik()
 	if(isturnsound_on)
+<<<<<<<< HEAD:modular_meta/features/cheburek_car/code/cheburek.dm
 		playsound(src, 'modular_meta/features/cheburek_car/sound/car_turn_signal.ogg', 60)
+========
+		playsound(src, 'massmeta/features/cheburek_car/sound/car_turn_signal.ogg', 60)
+>>>>>>>> d5185188a4f (mod cheburek):massmeta/features/cheburek_car/code/cheburek.dm
 		//update_overlays()
 		cut_overlay(image(icon, "car_blinkers", LYING_MOB_LAYER))
 		blinkers_on = FALSE
