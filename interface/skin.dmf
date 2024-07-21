@@ -54,7 +54,7 @@ menu "menu"
 		category = "&Help"
 		saved-params = "is-checked"
 
-//MASSMETA EDIT ADDITION BEGIN (better ui)
+//MASSMETA EDIT ADDITION BEGIN (better_ui)
 	elem
 		name = "Refresh TGUI"
 		command = "refresh-tgui"
@@ -84,7 +84,6 @@ menu "menu"
 		command = "adminwho"
 		category = "&Players"
 		saved-params = "is-checked"
-
 //MASSMETA EDIT ADDITION END
 
 window "mainwindow"
@@ -97,7 +96,10 @@ window "mainwindow"
 		is-default = true
 		saved-params = "pos;size;is-minimized;is-maximized"
 		statusbar = false
-		icon = 'massmeta\\icons\\ui_icons\\common\\massmeta_64.png' //MASSMETA EDIT CHANGE (server main icon)
+		//MASSMETA EDIT CHANGE BEGIN (better_ui)
+		//icon = 'icons\\ui_icons\\common\\tg_32.png'
+		icon = 'massmeta\\features\\better_ui\\icons\\massmeta_64.png'
+		//MASSMETA EDIT CHANGE END
 		macro = "default"
 		menu = "menu"
 	elem "split"
