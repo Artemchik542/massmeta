@@ -75,7 +75,6 @@
 #include "code\modules\jobs\job_types\head_of_personnel.dm"
 #include "game\objects\items\storage\garment.dm"
 #include "code\modules\hooch.dm"
-#include "code\datums\quirks\positive_quirks\augmented.dm"
 #include "code\modules\cargo\markets\market_items\clothing.dm"
 #include "code\modules\jobs\job_types\clown.dm"
 #include "code\modules\map_vote.dm"
@@ -84,13 +83,6 @@
 #include "code\modules\surgery\organs\internal\butts\butts.dm"
 #include "code\modules\surgery\organs\internal\butts\butts_init.dm"
 
-<<<<<<< HEAD
-//gay removal (6.21 КоАП РФ)
-#include "code\modules\clothing\under\accessories\badges.dm"
-
-
-=======
->>>>>>> 5911ad170c9 (mod gay_removal)
 //Testicular_torsion wizard
 #include "code\modules\spells\spell_types\touch\testicular_torsion.dm"
 #include "code\modules\antags\wizard\equipment\spellbook_entries\offensive.dm"
