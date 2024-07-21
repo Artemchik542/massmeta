@@ -12,9 +12,6 @@
 	if (carbon_target.gender == FEMALE)
 		to_chat(user, span_warning("Target has no balls!"), confidential = TRUE)
 		return
-	if (carbon_target.stat == DEAD)
-		to_chat(user, span_warning("Target must be alive."), confidential = TRUE)
-		return
 
 	carbon_target.apply_damage(rand(20, 40), BRUTE, BODY_ZONE_L_LEG, wound_bonus = CANT_WOUND, forced = TRUE)
 	carbon_target.apply_damage(rand(20, 40), BRUTE, BODY_ZONE_R_LEG, wound_bonus = CANT_WOUND, forced = TRUE)
@@ -29,6 +26,7 @@
 		span_danger("You can hear someone's balls bursting like balloons!")
 	)
 
-	carbon_target.emote("scream")
-	var/list/phrase = world.file2list("strings/massmeta/testicular_torsion_phrases.txt")
-	carbon_target.say(pick(phrase))
+	if(carbon_target.stat != DEAD)
+		carbon_target.emote("scream")
+		var/list/phrase = world.file2list("strings/massmeta/testicular_torsion_phrases.txt")
+		carbon_target.say(pick(phrase))
