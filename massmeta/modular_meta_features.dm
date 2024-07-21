@@ -74,7 +74,6 @@
 #include "code\modules\jobs\job_types\chief_medical_officer.dm"
 #include "code\modules\jobs\job_types\head_of_personnel.dm"
 #include "game\objects\items\storage\garment.dm"
-#include "code\modules\hooch.dm"
 #include "code\modules\cargo\markets\market_items\clothing.dm"
 #include "code\modules\jobs\job_types\clown.dm"
 #include "code\modules\map_vote.dm"

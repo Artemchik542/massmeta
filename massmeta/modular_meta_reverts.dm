@@ -11,4 +11,5 @@
 // BEGIN_INCLUDE
 #include "reverts\back_beheading\includes.dm"
 #include "reverts\glasses_protect_welding\includes.dm"
+#include "reverts\hooch_heals_assistants\includes.dm"
 // END_INCLUDE
