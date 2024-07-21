@@ -1,3 +1,6 @@
+#undef HALLUCINATION_FILE
+#undef BRAIN_DAMAGE_FILE
+
 //ORIGINAL FILE: code/__DEFINES/text.dm
 
 /// File location for hallucination lines
