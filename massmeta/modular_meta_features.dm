@@ -22,6 +22,7 @@
 #include "features\quirk_augmented\includes.dm"
 #include "features\smites\includes.dm"
 #include "features\soviet_crate\includes.dm"
+#include "features\wizard_spells\includes.dm"
 // END_INCLUDE
 
 
@@ -80,8 +81,3 @@
 //buts
 #include "code\modules\surgery\organs\internal\butts\butts.dm"
 #include "code\modules\surgery\organs\internal\butts\butts_init.dm"
-
-//Testicular_torsion wizard
-#include "code\modules\spells\spell_types\touch\testicular_torsion.dm"
-#include "code\modules\antags\wizard\equipment\spellbook_entries\offensive.dm"
-
