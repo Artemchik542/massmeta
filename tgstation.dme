@@ -6547,10 +6547,5 @@
 #include "interface\fonts\spess_font.dm"
 #include "interface\fonts\tiny_unicode.dm"
 #include "interface\fonts\vcr_osd_mono.dm"
-#include "massmeta\modular_meta_features.dm"
-#include "massmeta\modular_meta_master.dm"
 #include "modular_meta\main_modular_include.dm"
-
-#include "massmeta\modular_meta_reverts.dm"
-
 // END_INCLUDE
