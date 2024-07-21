@@ -80,7 +80,6 @@
 #include "code\modules\cargo\markets\market_items\clothing.dm"
 #include "code\modules\jobs\job_types\clown.dm"
 #include "code\modules\map_vote.dm"
-#include "code\modules\hallucination\fake_chat.dm"
 
 //buts
 #include "code\modules\surgery\organs\internal\butts\butts.dm"

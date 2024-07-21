@@ -73,11 +73,7 @@
 
 // JSON text files found in the tgstation/strings folder
 /// File location for brain damage traumas
-#define BRAIN_DAMAGE_FILE "massmeta/traumas.json" //MASSMETA EDIT CHANGE - ORIGINAL: "traumas.json"
-/// File location for kvass phrases, mmmmm kvass
-#define KVASS_PHRASES_FILE "massmeta/kvass.json" //MASSMETA EDIT ADDITION (kvass)
-/// File location for oguzok phrases
-#define OGUZOK_PHRASES_FILE "massmeta/oguzok.json" //MASSMETA EDIT ADDITION (oguzok)
+#define BRAIN_DAMAGE_FILE "traumas.json"
 /// File location for AI ion laws
 #define ION_FILE "massmeta/ion_laws.json" //MASSMETA EDIT ADDITION (ru_ai_laws)
 /// File location for pirate names
@@ -109,7 +105,7 @@
 /// File location for eigenstasium lines
 #define EIGENSTASIUM_FILE "eigenstasium.json"
 /// File location for hallucination lines
-#define HALLUCINATION_FILE "massmeta/hallucination.json" //MASSMETA EDIT CHANGE - ORIGINAL: "hallucination.json"
+#define HALLUCINATION_FILE "hallucination.json"
 /// File location for ninja lines
 #define NINJA_FILE "ninja.json"
 /// File loation for title splashes
