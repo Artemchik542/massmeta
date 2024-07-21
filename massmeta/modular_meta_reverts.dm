@@ -9,5 +9,6 @@
  */
 
 // BEGIN_INCLUDE
+#include "reverts\back_beheading\includes.dm"
 #include "reverts\glasses_protect_welding\includes.dm"
 // END_INCLUDE
