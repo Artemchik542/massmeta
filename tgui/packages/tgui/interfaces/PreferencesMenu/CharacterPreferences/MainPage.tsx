@@ -227,7 +227,11 @@ function GenderButton(props: GenderButtonProps) {
       placement="right-end"
       content={
         <Stack backgroundColor="white" ml={0.5} p={0.3}>
-          {[Gender.Male, Gender.Female, Gender.Other, Gender.Other2].map(
+		  {/*MASSMETA EDIT CHANGE BEGIN (gay_removal)*/}
+		  {/*ORIGINAL*/}
+          {/*{[Gender.Male, Gender.Female, Gender.Other, Gender.Other2].map(*/}
+		  {[Gender.Male, Gender.Female].map(
+		    /*MASSMETA EDIT CHANGE END*/
             (gender) => {
               return (
                 <Stack.Item key={gender}>

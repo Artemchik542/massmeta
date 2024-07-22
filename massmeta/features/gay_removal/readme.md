@@ -2,7 +2,11 @@
 
 ### Description:
 
-Убирает из репозитория ЛГБТ контент. Заменяет их значки на нейтральные значки с флагами стран.
+Убирает из репозитория большинство ЛГБТ контента. Заменяет их значки на нейтральные значки с флагами стран.
+
+Убирает из выбора пола "Их" и "Оно", а также не даёт сделать неопределённый пол (убирает выбор тип тела).
+
+(https://github.com/ss220club/Bandastation/pull/339)
 
 
 ### TG Proc/File Changes:
@@ -13,10 +17,11 @@
 
 ### Modular Overrides:
 
+- code/modules/loadout/categories/accessories.dm
 - code/modules/clothing/under/accessories/badges.dm
+- code/modules/client/preferences/body_type.dm
 - code/game/objects/structures/mirror.dm
 - code/modules/clothing/shoes/sneakers.dm
-- code/modules/loadout/categories/accessories.dm
 
 
 ### Defines:
@@ -26,9 +31,9 @@
 
 ### TGUI Files:
 
-- N/A
+- tgui/packages/tgui/interfaces/PreferencesMenu/MainPage.tsx
 
 
 ### Credits:
 
-- Artemchik542 (код), bee (спрайты)
+- Artemchik542 (код), bee (спрайты), ss220 (выбор пола)
