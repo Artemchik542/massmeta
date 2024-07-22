@@ -20,6 +20,7 @@
 #include "features\kvass\includes.dm"
 #include "features\lead_pipe\includes.dm"
 #include "features\oguzok\includes.dm"
+#include "features\pets_commands_ru\includes.dm"
 #include "features\quirk_augmented\includes.dm"
 #include "features\smites\includes.dm"
 #include "features\soviet_crate\includes.dm"
