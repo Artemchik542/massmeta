@@ -15,10 +15,10 @@
 // BEGIN_INCLUDE
 #include "features\hardsuits\includes.dm"
 #include "features\additional_circuit\includes.dm"
-#include "features\gay_removal\includes.dm"
 #include "features\hierophant_club_resprite\includes.dm"
 #include "features\kvass\includes.dm"
 #include "features\lead_pipe\includes.dm"
+#include "features\lgbt_removal\includes.dm"
 #include "features\oguzok\includes.dm"
 #include "features\pets_commands_ru\includes.dm"
 #include "features\quirk_augmented\includes.dm"

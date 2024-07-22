@@ -1,4 +1,4 @@
-## Module ID: gay_removal
+## Module ID: lgbt_removal
 
 ### Description:
 
@@ -13,6 +13,7 @@
 
 - code/datums/sprite_accessories.dm
 - code/modules/holiday/holidays.dm
+- code/game/objects/items/crayons.dm
 
 
 ### Modular Overrides:
