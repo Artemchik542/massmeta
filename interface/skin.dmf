@@ -229,7 +229,18 @@ window "infowindow"
 		saved-params = "is-checked"
 		text = "Wiki"
 		command = "wiki"
-	//MASSMETA EDIT CHANGE BEGIN (forum -> discord)
+	//MASSMETA EDIT CHANGE BEGIN (discord_verification)
+	/*
+	elem "forum"
+		type = BUTTON
+		pos = 275,5
+		size = 90x20
+		anchor1 = 43,0
+		anchor2 = 57,0
+		saved-params = "is-checked"
+		text = "Forum"
+		command = "forum"
+	*/
 	elem "discord"
 		type = BUTTON
 		pos = 276,5

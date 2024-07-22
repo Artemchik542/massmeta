@@ -32,7 +32,6 @@
 
 #include "code\_globalvars\lists\names.dm"
 #include "code\__HELPERS\names.dm"
-#include "interface\interface.dm"
 #include "code\modules\clothing\clothing.dm"
 #include "code\modules\surgery\organs\tongue.dm"
 #include "code\modules\clothing\suits\chaplainsuits.dm"
