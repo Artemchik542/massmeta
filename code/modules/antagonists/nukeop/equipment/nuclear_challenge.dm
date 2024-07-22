@@ -22,7 +22,7 @@ GLOBAL_LIST_EMPTY(jam_on_wardec)
 		return
 
 	declaring_war = TRUE
-	//MASSMETA EDIT CHANGE BEGIN (nukes_pop_reduce)
+	//MASSMETA EDIT CHANGE BEGIN (antagonists_balance)
 	/* ORIGINAL
 	var/are_you_sure = tgui_alert(user, "Consult your team carefully before you declare war on [station_name()]. Are you sure you want to alert the enemy crew? You have [DisplayTimeText(CHALLENGE_TIME_LIMIT - world.time - SSticker.round_start_time)] to decide.", "Declare war?", list("Yes", "No"))
 	*/
@@ -128,7 +128,7 @@ GLOBAL_LIST_EMPTY(jam_on_wardec)
 			continue
 		uplinks += uplink
 
-	//MASSMETA EDIT CHANGE BEGIN (nukes_pop_reduce)
+	//MASSMETA EDIT CHANGE BEGIN (antagonists_balance)
 	/* ORIGINAL
 	var/tc_to_distribute = CHALLENGE_TELECRYSTALS
 	*/
