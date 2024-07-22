@@ -4,7 +4,7 @@
 	causing them to feel immense pain, may also break their legs."
 	button_icon = 'massmeta/features/wizard_spells/icons/actions_spells.dmi'
 	button_icon_state = "torsion"
-	sound =  "massmeta/features/wizard_spells/sound/testicular_torsion.ogg"
+	sound = 'massmeta/features/wizard_spells/sound/testicular_torsion.ogg'
 
 	school = SCHOOL_SANGUINE
 	invocation_type = INVOCATION_SHOUT
@@ -29,8 +29,8 @@
 	var/mob/living/carbon/human/human_victim = victim
 	human_victim.apply_damage(rand(40, 55), BRUTE, BODY_ZONE_L_LEG, wound_bonus = rand(45, 75), forced = TRUE)
 	human_victim.apply_damage(rand(40, 55), BRUTE, BODY_ZONE_R_LEG, wound_bonus = rand(45, 75), forced = TRUE)
-	var/list/phrase = world.file2list("massmeta/strings/testicular_torsion_phrases.txt")
 	if(human_victim.stat != DEAD) // no ghosts speak
+		var/list/phrase = world.file2list("massmeta/strings/testicular_torsion_phrases.txt")
 		human_victim.say(pick(phrase))
 		human_victim.emote("screech")
 	return TRUE
