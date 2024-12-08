@@ -19,7 +19,7 @@
 	species_cookie = /obj/item/food/meat/slab
 	meat = /obj/item/food/meat/slab/pig
 	skinned_type = /obj/item/stack/sheet/hairlesshide
-	death_sound = 'modular_meta/features/hog/sound/deathsound.ogg'
+	death_sound = 'modular_meta/features/species_hog/sound/deathsound.ogg'
 	species_language_holder = /datum/language_holder/hog
 
 	bodypart_overrides = list(
@@ -33,9 +33,9 @@
 
 /datum/species/hog/get_scream_sound(mob/living/carbon/human/hog)
 	return pick(
-		'modular_meta/features/hog/sound/scream1.ogg',
-		'modular_meta/features/hog/sound/scream2.ogg',
-		'modular_meta/features/hog/sound/scream3.ogg',
+		'modular_meta/features/species_hog/sound/scream1.ogg',
+		'modular_meta/features/species_hog/sound/scream2.ogg',
+		'modular_meta/features/species_hog/sound/scream3.ogg',
 	)
 
 /datum/species/hog/get_cough_sound(mob/living/carbon/human/hog)
@@ -77,7 +77,7 @@
 	return 'sound/mobs/humanoids/human/sneeze/male_sneeze1.ogg'
 
 /datum/species/hog/get_laugh_sound(mob/living/carbon/human/hog)
-	return 'modular_meta/features/hog/sound/oink1.ogg'
+	return 'modular_meta/features/species_hog/sound/oink1.ogg'
 
 /datum/species/hog/get_sigh_sound(mob/living/carbon/human/hog)
 	if(hog.physique == FEMALE)
@@ -130,7 +130,7 @@
 	vary = TRUE
 /datum/emote/living/carbon/oink/get_sound(mob/living/user)
 	return pick(
-		'modular_meta/features/hog/sound/oink1.ogg',
-		'modular_meta/features/hog/sound/oink2.ogg',
-		'modular_meta/features/hog/sound/oink3.ogg',
+		'modular_meta/features/species_hog/sound/oink1.ogg',
+		'modular_meta/features/species_hog/sound/oink2.ogg',
+		'modular_meta/features/species_hog/sound/oink3.ogg',
 	)

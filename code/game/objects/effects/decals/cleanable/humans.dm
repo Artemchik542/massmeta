@@ -287,6 +287,10 @@
 			name = "footprints"
 		if(FOOTPRINT_SPRITE_PAWS)
 			name = "pawprints"
+		//MASSMETA EDIT ADDITION BEGIN (species_hog)
+		if(FOOTPRINT_SPRITE_HOOVES)
+			name = "hoofprints"
+		//MASSMETA EDIT ADDITION END
 	dryname = "dried [name]"
 	return ..()
 

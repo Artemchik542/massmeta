@@ -89,6 +89,9 @@
 		/datum/language/shadowtongue,
 		/datum/language/terrum,
 		/datum/language/nekomimetic,
+		//MASSMETA EDIT ADDITION BEGIN (species_hog)
+		/datum/language/hogic,
+		//MASSMETA EDIT ADDITION END
 	)
 
 /obj/item/organ/tongue/proc/handle_speech(datum/source, list/speech_args)

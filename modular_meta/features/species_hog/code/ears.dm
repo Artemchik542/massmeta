@@ -1,6 +1,6 @@
 /obj/item/organ/ears/hog
 	name = "hog ears"
-	icon = 'modular_meta/features/hog/icons/hog_mics.dmi'
+	icon = 'modular_meta/features/species_hog/icons/hog_mics.dmi'
 	icon_state = "m_ears"
 	visual = TRUE
 	damage_multiplier = 0.5
