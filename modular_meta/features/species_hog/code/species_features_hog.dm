@@ -1,3 +1,4 @@
+/*
 /proc/generate_hog_side_shot(datum/sprite_accessory/sprite_accessory, key, include_snout = TRUE)
 	var/static/icon/hog
 	var/static/icon/hog_with_snout
@@ -22,6 +23,7 @@
 	final_icon.Blend(COLOR_VIBRANT_LIME, ICON_MULTIPLY)
 
 	return final_icon
+*/
 
 /datum/preference/choiced/hog_ears
 	savefile_key = "feature_hog_ears"
@@ -31,9 +33,12 @@
 	should_generate_icons = TRUE
 	relevant_external_organ = /obj/item/organ/ears/hog
 
+/*
 /datum/preference/choiced/hog_ears/init_possible_values()
 	return assoc_to_keys_features(SSaccessories.hog_ears_list)
+*/
 
+/*
 /datum/preference/choiced/hog_ears/icon_for(value)
 	var/datum/sprite_accessory/sprite_accessory = SSaccessories.hog_ears_list[value]
 
@@ -53,6 +58,7 @@
 	final_icon.Crop(-2, 1, 29, 32)
 
 	return final_icon
+*/
 
 /datum/preference/choiced/hog_ears/apply_to_human(mob/living/carbon/human/target, value)
 	target.dna.features["ears"] = value
