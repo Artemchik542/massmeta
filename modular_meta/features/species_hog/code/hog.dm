@@ -1,22 +1,19 @@
+// Думаю без свиней нам здесь не обойтись, Дементий, гони свиней.
+
 /datum/species/hog
-	// Думаю без свиней нам здесь не обойтись, Дементий, гони свиней.
 	name = "\improper Hogperson"
-	plural_form = "Hogpersons"
+	plural_form = "Hogpeople"
 	id = SPECIES_HOG
+	mutanttongue = /obj/item/organ/tongue/hog
+	mutantears = /obj/item/organ/ears/hog
 	inherent_traits = list(
-	TRAIT_USES_SKINTONES,
+		TRAIT_USES_SKINTONES,
 	)
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	body_markings = list(/datum/bodypart_overlay/simple/body_marking = "None")
-	mutant_organs = list(
-		/obj/item/organ/ears/hog = "None",
-	)
-	mutanttongue = /obj/item/organ/tongue/hog
-	coldmod = 1.1
-	heatmod = 1.2
 	payday_modifier = 1.0
-	species_cookie = /obj/item/food/meat/slab
+	species_cookie = /obj/item/food/bonbon/peanut_truffle // pigs so mush like truffle
 	meat = /obj/item/food/meat/slab/pig
 	skinned_type = /obj/item/stack/sheet/hairlesshide
 	death_sound = 'modular_meta/features/species_hog/sound/deathsound.ogg'
@@ -36,6 +33,7 @@
 		'modular_meta/features/species_hog/sound/scream1.ogg',
 		'modular_meta/features/species_hog/sound/scream2.ogg',
 		'modular_meta/features/species_hog/sound/scream3.ogg',
+		'modular_meta/features/species_hog/sound/scream_virus.ogg',
 	)
 
 /datum/species/hog/get_cough_sound(mob/living/carbon/human/hog)
