@@ -1,5 +1,6 @@
 #include "code\carbon.dm"
 #include "code\ears.dm"
+#include "code\emotes.dm"
 #include "code\hog_bodyparts.dm"
 #include "code\hog.dm"
 #include "code\infuser_hog.dm"

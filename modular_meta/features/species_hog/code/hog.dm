@@ -28,6 +28,11 @@
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/hog,
 	)
 
+/datum/species/hog/randomize_features()
+	var/list/features = ..()
+	//TODO features["moth_markings"] = pick(SSaccessories.moth_markings_list)
+	return features
+
 /datum/species/hog/get_scream_sound(mob/living/carbon/human/hog)
 	return pick(
 		'modular_meta/features/species_hog/sound/scream1.ogg',
@@ -93,10 +98,10 @@
 	return SFX_SNORE_MALE
 
 /datum/species/hog/get_physical_attributes()
-	return "Human pigs are similar to humans, but less resistant to heat and cold, even a fat reserve does not save."
+	return "Hogs or so called Pigs are similar to humans, but not humans. Also can eat mostly all, humans too."
 
 /datum/species/hog/get_species_description()
-	return "People who grunt, as well as there are heels."
+	return "People who grunt with a cute snout that looks like an electrical outlet."
 
 /datum/species/hog/get_species_lore()
 	return list(
@@ -113,22 +118,4 @@
  		"During the existence of humanoid pigs, one significant corporation has appeared \"Hryak inc.\" \
  		It produces household goods and artificial pigs, as well as accessories for them. \
 		There are rumors that their employees are being hired by enemy organizations.",
-	)
-
-
-/datum/emote/living/hog
-	mob_type_allowed_typecache = /mob/living/carbon/human/species/hog
-	mob_type_blacklist_typecache = list()
-
-/datum/emote/living/hog/oink
-	key = "oink"
-	key_third_person = "oinks"
-	message = "oinks!"
-	emote_type = EMOTE_VISIBLE | EMOTE_AUDIBLE
-	vary = TRUE
-/datum/emote/living/carbon/oink/get_sound(mob/living/user)
-	return pick(
-		'modular_meta/features/species_hog/sound/oink1.ogg',
-		'modular_meta/features/species_hog/sound/oink2.ogg',
-		'modular_meta/features/species_hog/sound/oink3.ogg',
 	)
