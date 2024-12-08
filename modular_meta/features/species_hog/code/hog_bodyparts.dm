@@ -28,7 +28,7 @@
 	icon_greyscale = 'modular_meta/features/species_hog/icons/bodyparts.dmi'
 	limb_id = SPECIES_HOG
 	attack_type = BRUTE
-	unarmed_attack_verbs = list("kick")
+	unarmed_attack_verbs = list("kick", "bump",)
 	grappled_attack_verb = "hoof kick"
 	unarmed_attack_effect = ATTACK_EFFECT_PUNCH
 	unarmed_attack_sound = 'sound/items/weapons/punch1.ogg'
