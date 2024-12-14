@@ -55,6 +55,13 @@ SUBSYSTEM_DEF(accessories) // just 'accessories' for brevity
 	var/list/moth_markings_list
 	var/list/caps_list
 	var/list/pod_hair_list
+	
+	//MASSMETA EDIT ADDITIN BEGIN (species_hog)
+	// Hogs bits
+	var/list/hog_ears_list
+	var/list/hog_snouts_list
+	var/list/hog_markings_list
+	//MASSMETA EDIT ADDITIN END
 
 /datum/controller/subsystem/accessories/PreInit() // this stuff NEEDS to be set up before GLOB for preferences and stuff to work so this must go here. sorry
 	setup_lists()

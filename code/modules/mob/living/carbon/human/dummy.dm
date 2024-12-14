@@ -120,6 +120,12 @@ INITIALIZE_IMMEDIATE(/mob/living/carbon/human/dummy)
 	target.dna.features["tail_monkey"] = get_consistent_feature_entry(SSaccessories.tails_list_monkey)
 	target.dna.features["pod_hair"] = get_consistent_feature_entry(SSaccessories.pod_hair_list)
 	target.dna.features["caps"] = get_consistent_feature_entry(SSaccessories.caps_list)
+	//MASSMETA EDIT ADDITION BEGIN (species_hog)
+	target.dna.features["hog_ears"] = get_consistent_feature_entry(SSaccessories.hog_ears_list)
+	target.dna.features["hog_snout"] = get_consistent_feature_entry(SSaccessories.hog_snouts_list)
+	target.dna.features["hog_markings"] = get_consistent_feature_entry(SSaccessories.hog_markings_list)
+	//MASSMETA EDIT ADDITION END
+	
 	target.dna.initialize_dna(create_mutation_blocks = FALSE, randomize_features = FALSE)
 	// UF and UI are nondeterministic, even though the features are the same some blocks will randomize slightly
 	// In practice this doesn't matter, but this is for the sake of 100%(ish) consistency

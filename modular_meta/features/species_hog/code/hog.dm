@@ -4,15 +4,16 @@
 	name = "\improper Hogperson"
 	plural_form = "Hogpeople"
 	id = SPECIES_HOG
-	mutanttongue = /obj/item/organ/tongue/hog
-	mutantears = /obj/item/organ/ears/hog
 	inherent_traits = list(
 		TRAIT_USES_SKINTONES,
 	)
-	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID
 	body_markings = list(/datum/bodypart_overlay/simple/body_marking = "None")
+	mutant_organs = list(/obj/item/organ/snout/hog = "Pig")
+	mutanttongue = /obj/item/organ/tongue/hog
+	mutantears = /obj/item/organ/ears/hog
 	payday_modifier = 1.0
+	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
 	species_cookie = /obj/item/food/bonbon/peanut_truffle // pigs so mush like truffle
 	meat = /obj/item/food/meat/slab/pig
 	skinned_type = /obj/item/stack/sheet/hairlesshide
@@ -30,7 +31,7 @@
 
 /datum/species/hog/randomize_features()
 	var/list/features = ..()
-	//TODO features["moth_markings"] = pick(SSaccessories.moth_markings_list)
+	features["hog_markings"] = pick(SSaccessories.hog_markings_list)
 	return features
 
 /datum/species/hog/get_scream_sound(mob/living/carbon/human/hog)

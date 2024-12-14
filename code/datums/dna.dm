@@ -820,7 +820,12 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 /mob/living/carbon/proc/random_mutate_unique_features()
 	if(!has_dna())
 		CRASH("[src] does not have DNA")
+	//MASSMETA EDIT CHANGE BEGIN (species_hog)
+	/* ORIGINAL
 	var/num = rand(1, DNA_FEATURE_BLOCKS)
+	*/
+	var/num = rand(1, DNA_FEATURE_BLOCKS + DNA_MODULAR_BLOCKS_COUNT)
+	//MASSMETA EDIT CHANGE END
 	dna.set_uni_feature_block(num, random_string(GET_UF_BLOCK_LEN(num), GLOB.hex_characters))
 	updateappearance(mutcolor_update = TRUE, mutations_overlay_update = TRUE)
 
