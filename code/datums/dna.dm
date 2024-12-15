@@ -45,7 +45,12 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 /proc/populate_total_uf_len_by_block()
 	. = list()
 	var/total_block_len = 1
+	//MASSMETA EDIT CHANGE BEGIN (species_hog)
+	/* ORIGINAL
 	for(var/blocknumber in 1 to DNA_FEATURE_BLOCKS)
+	*/
+	for(var/blocknumber in 1 to (DNA_FEATURE_BLOCKS + DNA_MODULAR_BLOCKS_COUNT))
+	//MASSMETA EDIT CHANGE END
 		. += total_block_len
 		total_block_len += GET_UF_BLOCK_LEN(blocknumber)
 
@@ -853,7 +858,12 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 			if(prob(probability))
 				M.dna.set_uni_feature_block(blocknum, random_string(GET_UI_BLOCK_LEN(blocknum), GLOB.hex_characters))
 	if(uf)
+		//MASSMETA EDIT CHANGE BEGIN (species_hog)
+		/* ORIGINAL
 		for(var/blocknum in 1 to DNA_FEATURE_BLOCKS)
+		*/
+		for(var/blocknum in 1 to (DNA_FEATURE_BLOCKS + DNA_MODULAR_BLOCKS_COUNT))
+		//MASSMETA EDIT CHANGE END
 			if(prob(probability))
 				M.dna.set_uni_feature_block(blocknum, random_string(GET_UF_BLOCK_LEN(blocknum), GLOB.hex_characters))
 	if(ui || uf)

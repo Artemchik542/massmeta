@@ -1,3 +1,4 @@
+// addition for /datum/dna/proc/generate_unique_features()
 /datum/dna/generate_unique_features()
 	. = ..()
 	var/list/L = new /list(DNA_MODULAR_BLOCKS_COUNT)
@@ -11,6 +12,7 @@
 	for(var/blocknum in 1 to DNA_MODULAR_BLOCKS_COUNT)
 		. += L[blocknum] || random_string(GET_UI_BLOCK_LEN(blocknum), GLOB.hex_characters)
 
+// addition for /datum/dna/proc/update_uf_block()
 /datum/dna/update_uf_block(blocknumber)
 	. = ..()
 	switch(blocknumber)
@@ -21,6 +23,7 @@
 		if(DNA_HOG_MARKINGS_BLOCK)
 			set_uni_feature_block(blocknumber, construct_block(SSaccessories.hog_markings_list.Find(features["hog_markings"]), SSaccessories.hog_markings_list.len))
 
+// addition for /mob/living/carbon/human/updateappearance()
 /mob/living/carbon/human/updateappearance(icon_update = TRUE, mutcolor_update = FALSE, mutations_overlay_update = FALSE)
 	. = ..()
 	var/features = dna.unique_features

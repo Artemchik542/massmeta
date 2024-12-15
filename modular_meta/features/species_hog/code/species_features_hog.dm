@@ -76,10 +76,10 @@
 	should_generate_icons = TRUE
 
 /datum/preference/choiced/hog_snout/init_possible_values()
-	return assoc_to_keys_features(SSaccessories.snouts_list)
+	return assoc_to_keys_features(SSaccessories.hog_snouts_list)
 
 /datum/preference/choiced/hog_snout/icon_for(value)
-	return generate_hog_side_shot(SSaccessories.snouts_list[value], "hog_snout", include_snout = FALSE)
+	return generate_hog_side_shot(SSaccessories.hog_snouts_list[value], "hog_snout", include_snout = FALSE)
 
 /datum/preference/choiced/hog_snout/apply_to_human(mob/living/carbon/human/target, value)
 	target.dna.features["hog_snout"] = value
