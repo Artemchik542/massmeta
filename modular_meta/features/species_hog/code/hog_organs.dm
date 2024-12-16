@@ -40,18 +40,18 @@
 
 	dna_block = DNA_HOG_SNOUT_BLOCK
 	
-	bodypart_overlay = /datum/bodypart_overlay/mutant/snout/hog
+	bodypart_overlay = /datum/bodypart_overlay/mutant/hog_snout
 
-/datum/bodypart_overlay/mutant/snout/hog
+/datum/bodypart_overlay/mutant/hog_snout
 	layers = EXTERNAL_ADJACENT
 	feature_key = "snout"
 
-/datum/bodypart_overlay/mutant/snout/hog/can_draw_on_bodypart(mob/living/carbon/human/human)
+/datum/bodypart_overlay/mutant/hog_snout/can_draw_on_bodypart(mob/living/carbon/human/human)
 	if(!(human.wear_mask?.flags_inv & HIDESNOUT) && !(human.head?.flags_inv & HIDESNOUT))
 		return TRUE
 	return FALSE
 
-/datum/bodypart_overlay/mutant/snout/hog/get_global_feature_list()
+/datum/bodypart_overlay/mutant/hog_snout/get_global_feature_list()
 	return SSaccessories.hog_snouts_list
 
 // Hog Tongue

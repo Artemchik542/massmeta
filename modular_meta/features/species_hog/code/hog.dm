@@ -8,7 +8,7 @@
 		TRAIT_USES_SKINTONES,
 	)
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID
-	body_markings = list(/datum/bodypart_overlay/simple/body_marking = "None")
+	body_markings = list(/datum/bodypart_overlay/simple/body_marking/hog = "None")
 	mutant_organs = list(/obj/item/organ/snout/hog = "Pig")
 	mutanttongue = /obj/item/organ/tongue/hog
 	mutantears = /obj/item/organ/ears/hog
@@ -120,3 +120,15 @@
  		It produces household goods and artificial pigs, as well as accessories for them. \
 		There are rumors that their employees are being hired by enemy organizations.",
 	)
+
+/datum/species/hog/create_pref_unique_perks()
+	var/list/to_add = list()
+
+	to_add += list(list(
+		SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
+		SPECIES_PERK_ICON = "fa-carrot",
+		SPECIES_PERK_NAME = "Omnivorous",
+		SPECIES_PERK_DESC = "Hogpeople can eat almost anything.",
+	))
+
+	return to_add

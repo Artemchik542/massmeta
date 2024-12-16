@@ -19,7 +19,7 @@
 
 	final_icon.Crop(11, 20, 23, 32)
 	final_icon.Scale(32, 32)
-	final_icon.Blend(COLOR_VIBRANT_LIME, ICON_MULTIPLY)
+	//final_icon.Blend(COLOR_VIBRANT_LIME, ICON_MULTIPLY)
 
 	return final_icon
 
@@ -30,7 +30,7 @@
 /datum/preference/choiced/hog_ears
 	savefile_key = "feature_hog_ears"
 	savefile_identifier = PREFERENCE_CHARACTER
-	category = PREFERENCE_CATEGORY_SECONDARY_FEATURES
+	category = PREFERENCE_CATEGORY_FEATURES
 	main_feature_name = "Ears"
 	should_generate_icons = TRUE
 	relevant_external_organ = /obj/item/organ/ears/hog
@@ -39,24 +39,7 @@
 	return assoc_to_keys_features(SSaccessories.hog_ears_list)
 
 /datum/preference/choiced/hog_ears/icon_for(value)
-	var/datum/sprite_accessory/sprite_accessory = SSaccessories.hog_ears_list[value]
-
-	var/icon/final_icon = icon('icons/mob/human/species/lizard/bodyparts.dmi', "lizard_chest_m")
-
-	if (sprite_accessory.icon_state != "none")
-		var/icon/body_markings_icon = icon(
-			'icons/mob/human/species/lizard/lizard_misc.dmi',
-			"male_[sprite_accessory.icon_state]_chest",
-		)
-
-		final_icon.Blend(body_markings_icon, ICON_OVERLAY)
-
-	final_icon.Blend(COLOR_VIBRANT_LIME, ICON_MULTIPLY)
-	final_icon.Crop(10, 8, 22, 23)
-	final_icon.Scale(26, 32)
-	final_icon.Crop(-2, 1, 29, 32)
-
-	return final_icon
+	return generate_hog_side_shot(SSaccessories.horns_list[value], "ears")
 
 /datum/preference/choiced/hog_ears/apply_to_human(mob/living/carbon/human/target, value)
 	target.dna.features["ears"] = value
@@ -93,7 +76,7 @@
 	category = PREFERENCE_CATEGORY_FEATURES
 	main_feature_name = "Body markings"
 	should_generate_icons = TRUE
-	relevant_body_markings = /datum/bodypart_overlay/simple/body_marking/
+	relevant_body_markings = /datum/bodypart_overlay/simple/body_marking/hog
 
 /datum/preference/choiced/hog_markings/init_possible_values()
 	return assoc_to_keys_features(SSaccessories.hog_markings_list)
