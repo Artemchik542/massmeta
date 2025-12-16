@@ -8,20 +8,16 @@
 
 /* --FEATURES-- */
 
-#if HOOKAHS
-	#include "features\hookahs\includes.dm"
-#endif
-
 #include "features\additional_circuit\includes.dm"
 #include "features\butt_farts\includes.dm"
-#if CHEBUREK_CAR
-	#include "features\cheburek_car\includes.dm"
-#endif
+#include "features\cheburek_car\includes.dm"
+#include "features\hookahs\includes.dm"
+#include "features\kumiss_beverage\includes.dm"
+#include "features\kvass_beverage\includes.dm"
 #include "features\venom_knife\includes.dm"
 #include "features\skill_issue\includes.dm"
-#if ROBUST_ENJOYER
-	#include "features\robust_enjoyer\includes.dm"
-#endif
+#include "features\robust_enjoyer\includes.dm"
+
 /* -- REVERTS -- */
 
 #include "reverts\revert_glasses_protect_welding\includes.dm"
@@ -31,11 +27,6 @@
 
 #include "ru_translate\ru_ai_laws\includes.dm"
 #include "ru_translate\ru_codewords\includes.dm"
-
-#if RU_CRAYONS
-	#include "ru_translate\ru_crayons\includes.dm"
-#endif
+#include "ru_translate\ru_crayons\includes.dm"
 #include "ru_translate\ru_tweak_say_fonts\includes.dm"
-#if RU_VENDORS
-	#include "ru_translate\ru_vendors\includes.dm"
-#endif
+#include "ru_translate\ru_vendors\includes.dm"
